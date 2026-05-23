@@ -1,5 +1,6 @@
-#include "image_handler.h"
 #include <opencv2/opencv.hpp>
+
+#include "image-handler.hpp"
 
 ImageHandler::ImageHandler() {}
 ImageHandler::~ImageHandler() {}
@@ -9,6 +10,6 @@ cv::Mat ImageHandler::loadImage(const std::string& path) {
     return img;
 }
 
-bool ImageHandler::saveImage(const cv::Mat& img) {
-    return false;
+bool ImageHandler::saveImage(const cv::Mat& img, const std::string& path) {
+    return cv::imwrite(path, img);
 }

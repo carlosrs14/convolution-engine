@@ -1,6 +1,7 @@
 #pragma once
+
 #include <string>
-#include <vector>
+#include <opencv2/opencv.hpp>
 
 class ImageHandler {
 public:
@@ -8,8 +9,6 @@ public:
     ~ImageHandler();
 
     cv::Mat loadImage(const std::string& path);
-    bool saveImage(const cv::Mat& img);
-
-private:
+    bool saveImage(const cv::Mat& img, const std::string& path = "result.png");
 };
 
