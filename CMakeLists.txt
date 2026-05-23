@@ -1,4 +1,4 @@
-cmake_minimun_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.10)
 project(ConvlutionEngine)
 
 set(CMAKE_CXX_POSTFIX 17)
@@ -13,7 +13,8 @@ set(SOURCES
     src/main.cpp
     src/convolution.cpp
     src/image-handler.cpp
-    src/visulizer.cpp
+    src/visualizer.cpp
+    src/kernel.cpp
 )
 
 add_executable(app ${SOURCES})
